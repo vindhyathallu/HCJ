@@ -3,6 +3,7 @@
     <head>
     <title>V_Registration</title>
     <link rel="stylesheet" href="./style.css">
+    
    </head>
     <body>
         <div class="Registration-form">
