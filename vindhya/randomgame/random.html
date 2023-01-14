@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Number Generator</title>
+    <link rel="stylesheet" href="random.css"/>
+  </head>
+  <body>
+    <button id="generate-button">Generate Random Number</button>
+    <br><br>
+    <label for="user-input">Enter a number between 0 and 9: </label>
+    <input type="text" id="user-input">
+    <br><br>
+    <p id="result"></p>
+
+    <script>
+      // Get references to the button and input element
+      const generateButton = document.getElementById("generate-button");
+      const userInput = document.getElementById("user-input");
+      const result = document.getElementById("result");
+
+      // Add a click event listener to the button
+      generateButton.addEventListener("click", function() {
+        // Generate a random number between 0 and 9
+        const randomNumber = Math.floor(Math.random() * 10);
+        // Compare the user input with the random number
+        if (userInput.value == randomNumber) {
+          result.innerHTML = "The numbers are equal.";
+        } else {
+          result.innerHTML = "The numbers are not equal.";
+        }
+      });
+    </script>
+  </body>
+</html>
